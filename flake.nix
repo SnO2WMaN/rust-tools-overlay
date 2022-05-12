@@ -6,6 +6,7 @@
     };
   };
   outputs = { self, nixpkgs, ... }@inputs: {
+    overlay = self.overlays.default;
     overlays.default = (import ./overlay.nix);
   };
 }
